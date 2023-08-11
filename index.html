@@ -67,8 +67,11 @@
         --color_dic: #031f5f;
         --color_dic_rgb: 3,31,95;
     }
+    * {
+        box-sizing:border-box;
+    }
 
-        html,body{
+        html,body, form{
             margin: 0;
             padding: 0;
         }
@@ -82,37 +85,63 @@
         #header {
             text-align: left;
             position: relative;
+            height: 64px;
         }
-        #header-hamburger{
+        #header-hamburger, #header-naverpay, #header-talk, #header-notice {
             position: absolute;
             top: 18px;
-            left: -10px;
-            display:inline-block;
             padding: 10px;
+            display:inline-block;
             background: none;
             border: none;  
             cursor: pointer;
-        }
-        #header-hamburger:hover::before {
+        } 
+        #header-hamburger:hover::before, #header-naverpay:hover::before, #header-talk:hover::before, #header-notice:hover::before {
             position: absolute;
             content: '';
             left: 1px;
             top: 1px;
-            width: 44px;
-            height: 44px;
+            width: 46px;
+            height: 46px;
             background-color:var(--color_option_bg);
             border-radius : 50%;
         }
-        #header-hamburger > div {
+        #header-hamburger > div, #header-naverpay > div, #header-talk > div, #header-notice > div{
             background-image: url(./sp_main.png);
             width: 26px;
             height: 26px;
             position: relative;
             z-index: 1;
             background-size: 434px 422px;
-            background-position: -364px 0px;
             background-repeat: no-repeat;
-        
+        }
+        #header-hamburger > div {
+            background-position: -364px 0px;
+        }
+        #header-hamburger {
+            left: -10px;        
+        }
+        #header-naverpay{
+            left: 42px;
+            padding: 10px 8px;
+        }
+        #header-naverpay > div {
+            width: 30px;
+            background-position: -31px -316px;
+        }
+        #header-talk{
+            right: 40px;
+            width: 46px;        
+        }
+        #header-talk > div {
+            background-position: -364px -108px;
+        }
+        #header-notice{
+            right: -10px;
+            width: 46px;
+        }
+        #header-notice > div {
+            background-position: -364px -54px;
         }
         #main{
             height: 2000px;
@@ -137,9 +166,145 @@
                     <span class="blind">확장 영역</span>
                     <!-- ::after -->
                 </button>
+                <button id="header-naverpay">
+                    <!-- ::before -->
+                    <div></div>
+                    <span class="blind">네이버 페이</span>
+                    <!-- ::after -->
+                </button>
+                <button id="header-talk">
+                    <!-- ::before -->
+                    <div></div>
+                    <span class="blind">메세지</span>
+                    <!-- ::after -->
+                </button>
+                <button id="header-notice">
+                    <!-- ::before -->
+                    <div></div>
+                    <span class="blind">알림</span>
+                    <!-- ::after -->
+                </button>
                 </div>
             </div>
-            <div id="search"></div>
+            <style>
+            #search > form {
+                display: inline-flex;
+                width: 706px;
+                height: 60px;
+                border: 1px solid #03c75a;                
+                text-align: left;
+                border-radius: 33px;
+             }
+             #search-svg {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 68px;
+                height: 100%;
+                margin-right: 12px;
+                padding:17px 17px 17px 27px;
+             }
+             #search-right {
+                display: inline-flex;
+                flex :1;
+                align-items: stretch;
+                justify-content: flex-end;
+            }
+             #search-svg svg {
+                fill: #03c75a;
+                width: 24px;
+                height: 24px;
+             }  
+             #search-input{
+                display: inline-block;
+                width: 480px;
+                height: 58px;
+                padding: 17px 0px;
+                font-size: 1.4rem;
+                line-height: 1.7rem;
+                font-weight: bold;
+                outline: none;
+                border: none;
+                border-radius: 0;
+                box-sizing: border-box;
+            }
+            #search-input::placeholder{
+                color: transparent;
+            }
+            #search-input:focus::placeholder{
+                color: #e4e4e4;
+                font-weight: 500;
+                letter-spacing: -0.4px;
+            }
+            #search-keyboard, #search-recent, #search-button{
+                background: transparent;
+                border: none;
+                cursor: pointer;
+            }
+            #search-keyboard{
+                padding: 21px 3px;
+                margin-right: 3px;
+            }
+            #search-recent{
+                padding: 26px 6px;
+                right: 1px;
+                top: 0;
+            }
+            #search-button{
+                padding: 17px 27px 16px 10px;
+            }
+            #serch-button > div{
+                background:#03c75a;
+                width: 25px;
+                height: 25px;
+            }
+            #search-keyboard::before, #search-recent::before, #search-button::before{
+                content: "";
+                display: block;
+                background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
+                background-size: 434px 422px;
+                background-repeat: no-repeat;
+            }
+            #search-keyboard::before {
+                background-position: -50px -270px;
+                width: 24px;
+                height: 16px;
+            }
+            #search-recent::before {
+                background-position: -323px -174px;
+                width: 10px;
+                height: 6px;
+            }
+            #search-button::before {
+                display: inline-block;
+                background-position: -364px -213px;
+                width: 25px;
+                height: 25px
+            }
+            #search-keyboard:hover::before{
+                filter: brightness(0.7);
+            }
+            
+            </style>
+            <div id="search">
+                <form action="">
+                    <a id="search-svg" href="#">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path></svg>
+                    </a><label for="search-input" class="blind">검색어 입력</label><input id="search-input" type="text" placeholder="검색어를 입력하세요." />
+                    <div id="search-right">
+                        <button href="#" id="search-keyboard">
+                            <span class="blind">입력 도구</span>
+                        </button>
+                        <button href="#" id="search-recent">
+                            <span class="blind">자동완성/최근검색어펼치기</span>
+                        </button></div>
+                        <button id="search-button">
+                            <div><span class="blind">검색</span></div>
+                        </button>
+                    
+                    <button class="blind">검색</button>
+                </form>
+            </div>
             <div id="nav"></div>
             <div id="main"></div>
         </div>
