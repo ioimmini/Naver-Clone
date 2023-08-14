@@ -693,8 +693,16 @@
                     flex: 1;
                     display: flex;
                 }
+                #main-shopping-gray .left {
+                    flex: 1;
+                    display: flex;
+                }
                 #main-newstand-gray .left > a:first-of-type {
                     width: 85.5px;
+                }
+                #main-shopping-gray .left > a:first-of-type {
+                    width: 85.5px;
+                    font-weight: 700;
                 }
                 #main-newstand-gray .left > a:first-of-type::after {
                     content: "";
@@ -707,6 +715,18 @@
                     display: inline-block;
                     margin: 10px 0 0 5px;
                     vertical-align: 3px;
+                 }
+                 #main-shopping-gray .left > a:first-of-type::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 8px;
+                    right: 8px;
+                    width: 3px;
+                    height: 3px;
+                    background-color: #d3d5d7;
+                    background-color: var(--color_dot_divider);
+                    border-radius: 50%;
                  }
                 #main-newstand-gray {
                     display: flex;
@@ -790,7 +810,7 @@
                 .left-section a:visited{
                     color: inherit;
                 }
-                ,.left-section a:hover{
+                .left-section a:hover{
                     text-decoration: underline;
                 }
                 #main-newstand-grid {
@@ -911,6 +931,36 @@
                 #main-shopping footer .text{
                     min-width: 176px;
                 }
+                #main-shopping-gray {
+                    display: flex;
+                }
+                #main-shopping-gray .left {
+                    width: 668px;
+                    background-color: var(--color_option_bg);
+                    padding: 15px 20px 14px;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    line-height: 21px;
+                    margin: 0 20px;
+                }
+                #main-shopping-gray .right {
+                    margin-left: auto;
+                    padding: 10px 0;
+                }
+                #main-shopping-gray .prev::before, #main-shopping-gray .next::before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 5px;
+                height: 5px;
+                transform: translate(-50%,-50%) rotate(45deg);
+                margin-left: 2px;
+                border-left: 2px solid #80868c;
+                border-bottom: 2px solid #80868c;
+                margin-left: 1px;
+            }
+                
             </style>
     <main id="main">
         <div id="main-left">
@@ -997,6 +1047,7 @@
                             <span>/18</span>
                             <button class="prev"><span class="blind">이전페이지</span></button>
                             <button class="next"><span class="blind">다음페이지</span></button>
+                        </div>
                         </div>
                         <div id="main-shopping-grid">
                             
