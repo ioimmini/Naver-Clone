@@ -507,6 +507,17 @@
                 }
                 #main-left-ad, #main-right-ad {
                     box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0,0,0,.04);
+                    border-radius: 8px;
+                }
+                #main-left-ad img{
+                    border-radius: 8px;
+                }
+                #main-right-ad img {
+                    border-radius: 8px;
+                width: 420px;
+                height: 240px;
+                object-fit: fill;
+
                 }
                 aside[id$=ad] {
                     border-radius: 8px;
@@ -610,31 +621,36 @@
                 #main-stock {
                     height: 236px;
                 }
-                #main-newstand {
+                #main-newstand, #main-shopping {
                     display: flex;
                     flex-flow: column;
                     height: 426px;
                     box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0,0,0,.04);
                     text-decoration: none;
                 }
-                #main-newstand-top {
+                #main-newstand-top, #main-shopping-top {
                     display: flex;
-                    padding: 18px 20px 17px;
                     line-height: 1.7rem;
                     font-size: 1.4rem;
                     letter-spacing: -0.4px;  
                 }
-                #main-newstand-top .dot::before,#main-newstand-top .slash::before {
+                #main-newstand-top {
+                    padding: 18px 20px 17px;
+                }
+                #main-shopping-top{
+                    padding: 19px 20px 16px;
+                }
+                #main-shopping .slash::before, #main-newstand-top .dot::before,#main-newstand-top .slash::before {
                     content: "";
                     display: inline-block;
                     background-color: #d3d5d7;
                     background-color: var(--color_dot_divider);
                 }
-                #main-newstand-top .slash, #main-newstand-top .dot {
+                #main-shopping .slash, #main-newstand-top .slash, #main-newstand-top .dot {
                     color: rgba(8, 8, 8, .5);
                     font-weight: 800;
                 }
-                #main-newstand-top .slash {
+                #main-shopping .slash, #main-newstand-top .slash {
                     position: relative;
                     padding-left: 26px;
                 }
@@ -645,7 +661,7 @@
                     border-radius: 50%;
                     vertical-align: 5px;
                 }
-                #main-newstand-top .slash::before {
+                #main-shopping .slash::before, #main-newstand-top .slash::before {
                     content: '';
                     position: absolute;
                     display: inline-block;
@@ -656,7 +672,7 @@
                     height: 15px;
                     transform: skewX(-15deg);
                 }
-                #main-newstand header{
+                #main-shopping header, #main-newstand header{
                     position: relative;
                     height: 23px;
                     font-size: 1.6rem;
@@ -664,7 +680,7 @@
                     justify-self: flex-start;
                     line-height: 23px;
                 }
-                #main-newstand header .bold{
+                #main-shopping header .bold, #main-newstand header .bold{
                     font-weight: bold;
                     color: black;
                 }
@@ -761,14 +777,15 @@
                     width: 1px;
                     height: 12px;
                     background-color: #d3d5d7;
-                    background-color: var(--color_dot_divider);                }
-                #main-newstand a{
+                    background-color: var(--color_dot_divider);                
+                }
+                #main-shopping a, #main-newstand a{
                     text-decoration: none;
                 }
-                #main-newstand a:visited{
+                #main-shopping a:visited, #main-newstand a:visited{
                     color: inherit;
                 }
-                #main-newstand a:hover{
+                #main-shopping a:hover, #main-newstand a:hover{
                     text-decoration: underline;
                 }
                 #main-newstand-grid {
@@ -888,7 +905,11 @@
             </style>
     <main id="main">
         <div id="main-left">
-            <aside id="main-left-ad"></aside>
+            <aside id="main-left-ad">
+                <div>
+                    <img src="./left_ad.jpg" height="130">
+                </div>
+            </aside>
                 <section id="main-newstand">
                     <div id="main-newstand-top">
                     <header>
@@ -946,7 +967,27 @@
                         <button class="grid"><span class="blind">격자보기</span></button>
                     </footer>
                 </section>
-            <section id="main-shopping"></section>
+            <section id="main-shopping">
+                <div id="main-shopping-top">
+                    <header>
+                        <a href="#" class="bold">쇼핑</a>
+                        <a href="#" class="slash">맨즈</a>
+                        <a href="#" class="slash">원쁠딜</a>
+                        <a href="#" class="slash">쇼핑라이브</a>
+                    </header>
+                    </div>
+                    <div id="main-shopping-gray">
+                        <div class="left">
+                            <a href="#" >오늘의 혜택</a>
+                        <div id="main-newstand-animation">
+                            <a href="#">연합뉴스</a>
+                            <a href="#">정민이 네이버 클론 만들기 도오전 ~ ! ! !</a>
+                        </div>
+                        </div>
+                        <div class="right">
+                            <div>1<span>/4</span></div>
+                    </div>
+            </section>
         </div>
             <div id="main-right">
                 <section id="main-login">
@@ -958,7 +999,11 @@
                         <a href="#">회원가입</a>
                     </div>
                 </section>
-                <aside id="main-right-ad"></aside>
+                <aside id="main-right-ad">
+                    <div>
+                    <img src="./right_ad.jpg" height="240">
+                    </div>
+                </aside>
                 <section id="main-weather" class="main-weather-and-stock" >
                     <header>날씨</header>
                     <div> </div>
