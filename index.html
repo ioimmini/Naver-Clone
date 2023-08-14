@@ -797,7 +797,94 @@
                 #main-newstand footer {
                     padding: 10px 0 11px;
                     border-top:1px solid var(--color_border_in);
+                    font-size: 1.3rem;
+                    line-height: 35px;
+                    font-weight: 600;
+                    color: #606060;
+                    color: var(--color_caption2);
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
                 }
+                #main-newstand footer .list, #main-newstand footer .grid {
+                    position: absolute;
+                    border: none;
+                    cursor: pointer;
+                    top: 0; 
+                    background: transparent;
+                }
+                #main-newstand footer .list{
+                    right: 49px;
+                    padding: 18px 9px 18px 20px;
+                }
+                #main-newstand footer .grid {
+                    right: 0;
+                    padding: 18px 20px 18px 9px;
+                }
+                #main-newstand footer .list::before{
+                    content: '';
+                    display: inline-block;
+                    background-image: url(./sp_main.png);
+                    background-size: 434px 422px;
+                    background-position: -391px -229px;
+                    background-repeat: no-repeat;
+                    width: 20px;
+                    height: 20px;
+                }
+                #main-newstand footer .grid::before {
+                    content:'';
+                    display: inline-block;
+                    background-image: url(./sp_main.png);
+                    background-size: 434px 422px;
+                    background-position: -84px -368px;
+                    background-repeat: no-repeat;
+                    width: 20px;
+                    height: 20px;
+                }
+                #main-newstand footer .news {
+                    color: var(--color_news);
+                }
+                #main-newstand footer .total {
+                    color: rgba(96, 96, 96, .5);
+                }
+                #main-newstand footer .text{
+                    padding: 0 16px;
+                    width: 156px;
+                }
+                #main-newstand footer .prev, #main-newstand footer .next {
+                    border: none;
+                    background: none;
+                    content: '';
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid #dadcdf;
+                    border: 1px solid var(--color_button_border);
+                    background-color: #fff;
+                    background-color: var(--color_button1_bg);
+                    display: inline-block;
+                    box-shadow: 0 1px 2px 0 rgba(0,0,0,.06);
+                    border-radius: 50%;
+                    vertical-align: top;
+                    cursor: pointer;
+                }
+                #main-newstand footer .prev::before{
+                    transform: rotate(180deg);
+                }
+                #main-newstand footer .prev::before, #main-newstand footer .next::before {
+                    content: "";
+                    display: block;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
+                    background-size: 434px 422px;
+                    background-position: -115px -389px;
+                    background-repeat: no-repeat;
+                    width: 10px;
+                    height: 12px;
+                    margin: auto;
+                }
+                
             </style>
     <main id="main">
         <div id="main-left">
@@ -808,8 +895,8 @@
                         <a href="#" class="bold">뉴스스탠드</a>
                         <a href="#" class="dot">언론사편집</a>
                         <a href="#" class="slash">엔터</a>
-                        <a href="#"class="slash">스포츠</a>
-                        <a href="#"class="slash">경제</a>
+                        <a href="#" class="slash">스포츠</a>
+                        <a href="#" class="slash">경제</a>
                     </header>
                     </div>
                     <div id="main-newstand-gray">
@@ -826,37 +913,37 @@
                         </div>
                     </div>
                     <div id="main-newstand-grid">
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
-                        <div>언론사</div>
+                        <div><img src="./214.png" height="20"  class="news_logo"></div>
+                        <div><img src="./215.png" height="20"  class="news_logo"></div>
+                        <div><img src="./216.png" height="20"  class="news_logo"></div>
+                        <div><img src="./217.png" height="20" class="news_logo"></div>
+                        <div><img src="./218.png" height="20"  class="news_logo"></div>
+                        <div><img src="./219.png" height="20"  class="news_logo"></div>
+                        <div><img src="./1.png" height="20"  class="news_logo"></div>
+                        <div><img src="./2.png" height="20"  class="news_logo"></div>
+                        <div><img src="./3.png" height="20"  class="news_logo"></div>
+                        <div><img src="./4.png" height="20"  class="news_logo"></div>
+                        <div><img src="./5.png" height="20"  class="news_logo"></div>
+                        <div><img src="./5.png" height="20"  class="news_logo"></div>
+                        <div><img src="./6.png" height="20"  class="news_logo"></div>
+                        <div><img src="./7.png" height="20"  class="news_logo"></div>
+                        <div><img src="./8.png" height="20"  class="news_logo"></div>
+                        <div><img src="./9.png" height="20"  class="news_logo"></div>
+                        <div><img src="./10.png" height="20"  class="news_logo"></div>
+                        <div><img src="./11.png" height="20"  class="news_logo"></div>
+                        <div><img src="./12.png" height="20"  class="news_logo"></div>
+                        <div><img src="./13.png" height="20"  class="news_logo"></div>
+                        <div><img src="./14.png" height="20"  class="news_logo"></div>
+                        <div><img src="./15.png" height="20"  class="news_logo"></div>
+                        <div><img src="./16.png" height="20"  class="news_logo"></div>
+                        <div><img src="./17.png" height="20"  class="news_logo"></div>
                     </div>
                     <footer>
-                        <button><span class="blind">이전</span></button>
-                        <div>언론사 더보기1페이지전체/4</div>
-                        <button><span class="blind">다음</span></button>
-                        <button><span class="blind">목록보기</span></button>
-                        <button><span class="blind">격자보기</span></button>
+                        <button class="prev"><span class="blind">이전 페이지</span></button>
+                        <div class="text"><span class="news">언론사</span>&nbsp;더보기&nbsp;1<span class="total">/4</span></div>
+                        <button class="next"><span class="blind">다음 페이지</span></button>
+                        <button class="list"><span class="blind">목록보기</span></button>
+                        <button class="grid"><span class="blind">격자보기</span></button>
                     </footer>
                 </section>
             <section id="main-shopping"></section>
