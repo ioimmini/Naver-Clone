@@ -16,4 +16,6 @@ naver clone
 - 광고 어사이드 ?
 - 
 ![스크린샷 2023-08-15 133652](https://github.com/ioimmini/Naver-Clone/assets/141547885/7cac2485-1b31-4dcf-9613-b0771a226d61)
-![Uploading 스크린샷 2023-08-15 133604.png…]()
+네이버 캡쳐
+![스크린샷 2023-08-15 133604](https://github.com/ioimmini/Naver-Clone/assets/141547885/56300cea-2314-4146-bd09-9e80dfc33ad1)
+네이버 클론 캡쳐
