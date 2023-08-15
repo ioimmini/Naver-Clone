@@ -15,3 +15,5 @@ naver clone
 - rem 단위 html 기본 설정 사이즈의 몇배인지
 - 광고 어사이드 ?
 - 
+![스크린샷 2023-08-15 133652](https://github.com/ioimmini/Naver-Clone/assets/141547885/7cac2485-1b31-4dcf-9613-b0771a226d61)
+![Uploading 스크린샷 2023-08-15 133604.png…]()
