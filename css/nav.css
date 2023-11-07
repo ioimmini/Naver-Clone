@@ -1,0 +1,93 @@
+#nav {
+    margin-top: 12px;
+}
+#nav > ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+#nav a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 20px;
+    font-size: 1.4rem;
+}
+#nav a div {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    display: inline-flex;
+}
+#nav a div::after{
+    content: "";
+    display: inline-block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
+    background-size: 434px 422px;
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    z-index: 1;
+    margin: 2px;
+}
+#nav a:visited {
+    color: black;
+}
+#nav li{
+    width: 64px;
+    margin-left: 4px;
+}
+#nav  li a div::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: -3px;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
+    background-size: 434px 422px;
+    background-position: 0px -128px;
+    background-repeat: no-repeat;
+    width: 54px;
+    height: 54px;    
+}
+#nav li:nth-of-type(1){
+    margin-left: 0;
+}
+#nav li:nth-of-type(1) a div::after{
+    background-position: -250px -90px;
+}
+#nav li:nth-of-type(2) a div::after{
+    background-position: -250px 0px;
+}
+#nav li:nth-of-type(3) a div::after{
+    background-position: -201px -98px;
+}
+#nav li:nth-of-type(4) a div::after{
+    background-position: -90px -209px;
+}
+#nav li:nth-of-type(5) a div::after{
+    background-position: 0px -209px;
+}
+#nav li:nth-of-type(6) a div::after{
+    background-position: -180px -209px;
+}
+#nav li:nth-of-type(7) a div::after{
+    background-position: -45px -209px;
+}
+#nav li:nth-of-type(8) a div::after{
+    width: 48px;
+    height: 48px;
+    background-position: -203px -2px;
+}
+#nav li:nth-of-type(9) a div::after{
+    background-position: -225px -209px;
+}
+#nav li:nth-of-type(10) a div::after{
+    background-position: -250px -135px;
+}
+#nav li a span{
+    display: inline-block;
+    margin-top: 5px;
+}
