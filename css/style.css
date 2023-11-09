@@ -108,7 +108,7 @@
         border-radius : 50%;
     }
     #header-hamburger > div, #header-naverpay > div, #header-talk > div, #header-notice > div{
-        background-image: url(./sp_main.png);
+        background-image: url(../png/sp_main.png);
         width: 26px;
         height: 26px;
         position: relative;

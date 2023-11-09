@@ -213,7 +213,7 @@ section[id^=main] {
 }
 #main-newstand-gray .left > a:first-of-type::after {
     content: "";
-    background-image: url(./sp_main.png);
+    background-image: url(../png/sp_main.png);
     background-size: 434px 422px;
     background-position: -133px -201px;
     background-repeat: no-repeat;
@@ -372,7 +372,7 @@ section[id^=main] {
 #main-newstand footer .list::before{
     content: '';
     display: inline-block;
-    background-image: url(./sp_main.png);
+    background-image: url(../png/sp_main.png);
     background-size: 434px 422px;
     background-position: -391px -229px;
     background-repeat: no-repeat;
@@ -382,7 +382,7 @@ section[id^=main] {
 #main-newstand footer .grid::before {
     content:'';
     display: inline-block;
-    background-image: url(./sp_main.png);
+    background-image: url(../png/sp_main.png);
     background-size: 434px 422px;
     background-position: -84px -368px;
     background-repeat: no-repeat;
