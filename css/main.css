@@ -72,7 +72,7 @@ section[id^=main] {
 #main-login-button i {
     position: relative;
     top: 1px;
-    background-image: url(./sp_main.png);
+    background-image: url(../png/sp_main.png);
     background-size: 434px 422px;
     background-position: -120px -166px;
     background-repeat: no-repeat;
